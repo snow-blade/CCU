@@ -1,6 +1,6 @@
 import cv2
 from managers import WindowManager, CaptureManager
-
+# Camera Capture utility
 class CCU(object):
 
     def __init__(self):
@@ -30,6 +30,7 @@ class CCU(object):
         escape -> Quit.
         """
         if keycode == 32: # space
+            print("screenshot taken, saved as \'screenshot.png\' ")
             self._captureManager.writeImage('screenshot.png')
         elif keycode == 9: # tab
             if not self._captureManager.isWritingVideo:
